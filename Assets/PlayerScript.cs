@@ -21,7 +21,8 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y <= -10 || transform.position.x <=-852.9){
+        if (transform.position.y <= -10){
+            //|| transform.position.x <=-852.9
             SceneManager.LoadScene("SampleScene");
         }
 
@@ -30,14 +31,14 @@ public class PlayerScript : MonoBehaviour
         transform.position += movement*speed*Time.deltaTime;
         rb.AddForce(new Vector3(-ForceAdelante,0,0)*Time.deltaTime);
 
-        /*
+        
         if (Input.GetKey(KeyCode.A)){
             rb.AddForce(new Vector3(0,0,-ForceAdelante)*Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D)){
             rb.AddForce(new Vector3(0,0,ForceAdelante)*Time.deltaTime);
         }
-        */
+        
 
         
 	}
